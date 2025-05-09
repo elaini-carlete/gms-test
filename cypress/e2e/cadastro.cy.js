@@ -4,7 +4,11 @@
 describe('US-0012-Funcionalidade: Cadastro de membros', () => {
   beforeEach(() => {
     cy.visit('/')
-  })
+  });
+
+  afterEach(() => {
+        cy.screenshot()
+    });
 
   // Campos preenchidos
   it('Deve fazer o cadastro de campos obrigatórios', () => {
